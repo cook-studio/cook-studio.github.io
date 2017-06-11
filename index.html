@@ -1,0 +1,35 @@
+---
+---
+<!doctype html>
+<html lang=en>
+  <head>
+    <meta charset=utf-8>
+    <title>Cook Studio, LLC.</title>
+    <style>
+      {% include normalize.scss %}
+
+      html {
+        background: black;
+        color: white;
+        height: 100%;
+      }
+
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      svg {
+        width: 800px;
+        max-width: 85%;
+        position: absolute;
+        top: 40%;
+        transform: translate(-50%, -50%);
+        left: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    {% include logo.svg %}
+  </body>
+</html>
