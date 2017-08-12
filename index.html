@@ -7,29 +7,176 @@
     <title>Cook Studio, LLC.</title>
     <style>
       {% include normalize.scss %}
+      * {
+        box-sizing: border-box;
+      }
 
       html {
-        background: black;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+      }
+
+      header {
+        margin: 6rem 0;
+      }
+
+      #logo {
+        width: 60%;
+        margin: auto;
+        display: block;
+      }
+
+      #hero {
+        width: 100%;
+      }
+
+      figcaption {
+        text-align: right;
+        font-style: italic;
+        color: #888;
+        margin: 0 2rem;
+        font-size: 0.6rem;
+      }
+
+      p {
+        margin: 2rem;
+        text-align: justify;
+        line-height: 1.4rem;
+      }
+
+      footer {
+        background-color: #D1CFCA;
+        letter-spacing: 0.2rem;
+      }
+
+      a {
+        text-decoration: none;
+        color: black;
+      }
+
+      #qualifier {
+        float: right;
         color: white;
-        height: 100%;
+        margin-right: 2rem;
+        margin-top: -0.2rem;
       }
 
-      body {
-        position: relative;
-        height: 100%;
+      address table {
+        margin: 2rem;
+        font-style: normal;
       }
 
-      svg {
-        width: 1100px;
-        max-width: 90%;
+      footer {
+        text-transform: uppercase;
+        float: left;
+        width: 100%;
         position: absolute;
-        top: 40%;
-        transform: translate(-50%, -50%);
-        left: 50%;
+        bottom: 0;
+        left: 0;
+        right: 0;
       }
+
+      #insta {
+        float: right;
+        margin-top: -3rem;
+        margin-right: 2rem;
+      }
+
+      @media (orientation: landscape) {
+        body {
+          padding-top: 7rem;
+        }
+
+        header {
+          float: left;
+          width: 39%;
+          margin: 0;
+        }
+
+        #logo {
+          width: 90%;
+          margin-top: -2rem;
+        }
+
+        figure {
+          float: right;
+          width: 60%;
+          padding: 0 2rem;
+        }
+
+        section {
+          clear: left;
+        }
+
+        figcaption {
+          margin: 0;
+        }
+
+        p {
+          margin-left: 4rem;
+          padding-right: 56rem; /* cause i'm professional */
+        }
+
+        section {
+          padding-top: 0.5rem;
+        }
+      }
+
     </style>
   </head>
   <body>
-    {% include logo.svg %}
+    <header>
+      {% include logo.svg %}
+    </header>
+
+    <figure>
+      <img id=hero src="/img/bouldin-creek-house.png" />
+
+      <figcaption>
+        This project was a collaboration with Architect Clayton Little in the
+        Bouldin Creek neighborhood of Austin, Texas. Photo courtesy of John
+        Newbold
+      </figcaption>
+    </figure>
+
+    <section>
+      <p>
+        Cook Studio, LLC is an architectural design firm owned and operated by
+        Texas Licensed Architect Justin Cook. Justin has a diverse professional
+        background in the architecture and construction industries, and is now
+        primarily focused on providing residential and small scale commercial
+        architectural services in the central Austin, TX area.
+      </p>
+
+      <p>
+        Cook Studio, LLC specializes in providing thoughtful, client focused
+        design executed through an organized, efficient, and collaborative
+        process. Please reach out and contact us through the information below to
+        set up an initial consultation. We look forward to working with you on
+        your next project!
+      </p>
+    </section>
+
+    <footer>
+      <span id=qualifier>Website coming soon</span>
+
+      <address>
+        <table>
+          <tr>
+            <td>Email:</td>
+            <td>
+              <a href=mailto:jcook@cookstudioatx.com>jcook@cookstudioatx.com</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Phone:</td>
+            <td><a href=tel:512.659.6611>512.659.6611</a></td>
+          </tr>
+        </table>
+      </address>
+
+      <a id=insta href="https://www.instagram.com/cookstudioatx/">Instagram: @cookstudioatx</a>
+    </footer>
   </body>
 </html>
