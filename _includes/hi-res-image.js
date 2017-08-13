@@ -4,9 +4,9 @@ document.body.onload = function() {
     var newImg = new Image();
     var width = 760;
 
-    if (window.innerWidth < 760) {
+    if (window.innerWidth < 760 / 2) {
       return;
-    } else if (window.innerWidth < 1280) {
+    } else if (window.innerWidth < 1280 / 2) {
       newImg.src = img.src.replace('-760', '-1280');
     } else {
       newImg.src = img.src.replace('-760', '');

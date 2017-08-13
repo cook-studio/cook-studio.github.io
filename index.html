@@ -4,7 +4,11 @@
 <html lang=en>
   <head>
     <meta charset=utf-8>
+
     <title>Cook Studio, LLC.</title>
+
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+
     <style>
       {% include normalize.scss %}
       * {
@@ -17,11 +21,10 @@
       }
 
       header {
-        margin: 6rem 0;
+        margin: 2rem 0;
       }
 
       #logo {
-        width: 60%;
         margin: auto;
         display: block;
       }
@@ -62,7 +65,7 @@
       }
 
       address table {
-        margin: 2rem;
+        margin: 1rem;
         font-style: normal;
       }
 
@@ -70,7 +73,7 @@
         text-transform: uppercase;
         float: left;
         width: 100%;
-        position: absolute;
+        position: fixed;
         bottom: 0;
         left: 0;
         right: 0;
@@ -80,6 +83,10 @@
         float: right;
         margin-top: -3rem;
         margin-right: 2rem;
+      }
+
+      #insta-table {
+        display: none;
       }
 
       @media (orientation: landscape) {
@@ -120,6 +127,40 @@
         section {
           padding-top: 0.5rem;
         }
+
+        address table {
+          margin: 2rem;
+        }
+      }
+
+      @media all and (orientation: portrait) {
+        #logo {
+          width: 80%;
+        }
+
+        footer table td:first-child {
+          display: none;
+        }
+
+        footer table {
+          border-spacing: 0.5rem;
+        }
+
+        #qualifier {
+          display: none;
+        }
+
+        #insta-table {
+          display: table-row;
+        }
+
+        #insta {
+          display: none;
+        }
+
+        body {
+          margin-bottom: 10rem;
+        }
       }
 
     </style>
@@ -133,9 +174,8 @@
       <img id=hero src="/img/bouldin-creek-house-760.png" />
 
       <figcaption>
-        This project was a collaboration with Architect Clayton Little in the
-        Bouldin Creek neighborhood of Austin, Texas. Photo courtesy of John
-        Newbold
+        A collaboration with Architect Clayton Little in the Bouldin Creek
+        neighborhood of Austin, Texas. Photo courtesy of John Newbold
       </figcaption>
     </figure>
 
@@ -172,6 +212,13 @@
           <tr>
             <td>Phone:</td>
             <td><a href=tel:512.659.6611>512.659.6611</a></td>
+          </tr>
+
+          <tr id=insta-table>
+            <td>Instagram:</td>
+            <td>
+              <a href="https://www.instagram.com/cookstudioatx/">@cookstudioatx</a>
+            </td>
           </tr>
         </table>
       </address>
