@@ -1,4 +1,8 @@
 ---
+exterior_alt_text: >-
+  Exterior image of a house in Bouldin Creek that Justin worked on.
+interior_alt_text: >-
+  Interior image of a house in Bouldin Creek that Justin worked on.
 ---
 <!doctype html>
 <html lang=en>
@@ -20,12 +24,28 @@
     </header>
 
     <figure>
-      <img id=hero src="/img/bouldin-creek-house-760.png" />
+      <img id=hero
+           class="mobile-hero responsive"
+           src=/img/bouldin-creek-house-760.png
+           alt="{{ page.exterior_alt_text }}" />
 
-      <figcaption>
-        A collaboration with Architect Clayton Little in the Bouldin Creek
-        neighborhood of Austin, Texas. Photo courtesy of John Newbold
-      </figcaption>
+      <div style="float: left; width: 47%; padding: 0 3%">
+        <img class=interior-hero
+             style="width: 100%"
+             src=/img/bouldin-creek-interior.png
+             alt="{{ page.interior_alt_text }}" />
+
+        <figcaption>
+          A collaboration with Architect Clayton Little in the Bouldin Creek
+          neighborhood of Austin, Texas. <br>
+          Photo courtesy of John Newbold
+        </figcaption>
+      </div>
+
+      <img class=desktop-exterior
+           style="float: right; width: 49%;"
+           src=/img/bouldin-creek-house-landscape.png
+           alt="{{ page.exterior_alt_text }}" />
     </figure>
 
     <section>

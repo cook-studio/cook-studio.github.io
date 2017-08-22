@@ -104,6 +104,9 @@ footer {
 
   figcaption {
     margin: 0;
+    width: 70%;
+    float: right;
+    line-height: 2em;
   }
 
   p {
@@ -117,6 +120,10 @@ footer {
 
   address table {
     margin: 2rem;
+  }
+
+  .mobile-hero {
+    display: none;
   }
 }
 
@@ -148,5 +155,8 @@ footer {
   body {
     margin-bottom: 10rem;
   }
-}
 
+  .interior-hero, .desktop-exterior {
+    display: none;
+  }
+}

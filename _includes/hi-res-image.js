@@ -1,5 +1,7 @@
 document.body.onload = function() {
-  [].slice.call(document.getElementsByTagName('img'), 0).forEach(function(img) {
+  var images = [].slice.call(document.getElementsByClassName('responsive'), 0);
+
+  images.forEach(function(img) {
     var src = img.src;
     var newImg = new Image();
     var width = 760;
