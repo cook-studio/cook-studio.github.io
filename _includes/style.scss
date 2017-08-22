@@ -125,6 +125,12 @@ footer {
   .mobile-hero {
     display: none;
   }
+
+  .caption-wrapper {
+    float: left;
+    width: 47%;
+    padding: 0 3%;
+  }
 }
 
 @media all and (orientation: portrait) {
