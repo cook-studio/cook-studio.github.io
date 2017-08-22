@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+header {
+  margin: 2rem 0;
+}
+
+#logo {
+  margin: auto;
+  display: block;
+}
+
+#hero {
+  width: 100%;
+}
+
+figcaption {
+  text-align: right;
+  font-style: italic;
+  color: #888;
+  margin: 0 2rem;
+  font-size: 0.6rem;
+}
+
+p {
+  margin: 2rem;
+  text-align: justify;
+  line-height: 1.4rem;
+}
+
+footer {
+  background-color: #D1CFCA;
+  letter-spacing: 0.2rem;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+#qualifier {
+  float: right;
+  color: white;
+  margin-right: 2rem;
+  margin-top: -0.2rem;
+}
+
+address table {
+  margin: 1rem;
+  font-style: normal;
+}
+
+footer {
+  text-transform: uppercase;
+  float: left;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#insta {
+  float: right;
+  margin-top: -3rem;
+  margin-right: 2rem;
+}
+
+#insta-table {
+  display: none;
+}
+
+@media (orientation: landscape) {
+  body {
+    padding-top: 7rem;
+  }
+
+  header {
+    float: left;
+    width: 39%;
+    margin: 0;
+  }
+
+  #logo {
+    width: 90%;
+    margin-top: -2rem;
+  }
+
+  figure {
+    float: right;
+    width: 60%;
+    padding: 0 2rem;
+  }
+
+  section {
+    clear: left;
+  }
+
+  figcaption {
+    margin: 0;
+  }
+
+  p {
+    margin-left: 4rem;
+    padding-right: 56rem; /* cause i'm professional */
+  }
+
+  section {
+    padding-top: 0.5rem;
+  }
+
+  address table {
+    margin: 2rem;
+  }
+}
+
+@media all and (orientation: portrait) {
+  #logo {
+    width: 80%;
+  }
+
+  footer table td:first-child {
+    display: none;
+  }
+
+  footer table {
+    border-spacing: 0.5rem;
+  }
+
+  #qualifier {
+    display: none;
+  }
+
+  #insta-table {
+    display: table-row;
+  }
+
+  #insta {
+    display: none;
+  }
+
+  body {
+    margin-bottom: 10rem;
+  }
+}
+
