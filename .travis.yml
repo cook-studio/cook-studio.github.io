@@ -1,0 +1,15 @@
+# Instead of installing anything run a command that does nothing
+install: true
+
+# Instead of running tests, run a command that does nothing
+script: true
+
+# If tests pass (and in this case they always will since we're not running
+# any), then purge the Cloudflare cache so the changes show up
+after_success: _bin/purgecache
+
+# This puts the Cloudflare API key in an environment variable so we can purge
+# the cache
+env:
+  global:
+    secure: pWQ94OhcayQifqHpZZo789L2hRx7Erqj8R51mr5WJpwfnuYIEqng3Y2XQ2+yz/UIVBEpJqdb6pqEOQTsEl+eLhbZoN90SSF5Kt72EMCFbe7Ax4Njz/xHwR99KcL5akahClhhvd6kjZBr9c17q1COpwmQQkYe3mBAcSOkxcFySDtfWH/aBfsrfmiX1KMHuoMZ+yzsWS6tQqNwPqaIMmV4PySxXwkJEtpMNTkWqJPWZkvQ5Wq6YwwAEtUgGn2u3Ni5Xi+6IU0uyjddaBp5xL9CHwMHxqCEEHdO6mjpseWh1yAYi45/DAYZqkdvKdfy4P+cyRUu8I/RrlzxZo2Yoc/+bOt/nPPwqPZrPKuq2LR3QXxDWgiddmQIBH9xA5aVZ7Z1jqBe6v6dZL7/4VhTKAIqA/zExUWqxXPG+Jqsf1dFNC5QVTC+e+9KC47LvT6mNUi/pha5oWCyPWOySu+DwAjFKNZpKpNpwbvZrj257AWNWasIFDMJAsAoFADbScArkFal+/nc/6kMrlfvn9MmO011v3zB8Unp/aIqBTVgcaNYOEAJ3eWMoHDN/jRIXfoxJ0/GdsxK/gx6w6gE0XPZe+EiW3IfiKA9Nr7K8dDA1eGwd/Td0s+FTqtPDgyLGP4qVeW8Su4nS8GMPFnasTlp7ZIV++jXGNxkpcNBfetoBdEY/zI=
