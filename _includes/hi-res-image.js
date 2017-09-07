@@ -19,4 +19,20 @@ document.body.onload = function() {
       img.src = newImg.src
     };
   });
+
+  // firefox ur breaking my heart
+  var svg = document.querySelector('svg');
+  var svgWidth = svg.getBoundingClientRect().width;
+  var wordWidth = svg.querySelector('#g54').getBoundingClientRect().width;
+
+  if (wordWidth >= svgWidth) {
+    console.log('removing bad svg');
+    var img = document.createElement('img');
+    img.src = '/img/logo-with-text.svg';
+    img.setAttribute('alt', 'Cook Studio, LLC. logo');
+    img.setAttribute('style',
+        'transform: scale(1.97) translateX(76px); margin-bottom: 2rem');
+    svg.parentNode.insertBefore(img, svg);
+    svg.remove();
+  }
 };
