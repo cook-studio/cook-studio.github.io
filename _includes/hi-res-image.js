@@ -31,7 +31,7 @@ document.body.onload = function() {
     img.src = '/img/logo-with-text.svg';
     img.setAttribute('alt', 'Cook Studio, LLC. logo');
     img.setAttribute('style',
-        'transform: scale(1.97) translateX(76px); margin-bottom: 2rem');
+        'transform: scale(1.925) translateX(78.5px); margin-bottom: 1.7rem; margin-top: -4px');
     svg.parentNode.insertBefore(img, svg);
     svg.remove();
   }
